@@ -24,6 +24,9 @@ from .super_resolution import *
 from .ternary_conv import *
 from .quan_conv import *
 from .quan_conv_bn import *
+from .binary_conv_my import *
+from .mysign import *
+from .mybinarydense import *
 
 __all__ = [
 
@@ -78,4 +81,9 @@ __all__ = [
     #quan_conv
     'QuanConv2d',
     'QuanConv2dWithBN',
+
+    #bjliu 
+    'MyBinaryConv2d',
+    'MySign',
+    'MyBinaryDense'
 ]

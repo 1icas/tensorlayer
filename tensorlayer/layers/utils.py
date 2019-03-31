@@ -30,9 +30,19 @@ __all__ = [
     'quantize_weight_overflow',
     'set_name_reuse',
     'ternary_operation',
+    'binary_weight'
 ]
 
 ########## Module Public Functions ##########
+
+@tf.RegisterGradient("SignBackprop")
+def _signprop_(op, grad):
+    return tf.clip_by_value(grad, -1, 1)
+
+
+def binary_weight(x):
+    with tf.get_default_graph().gradient_override_map({"Sign": "SignBackprop"}):
+        return tf.sign(x)
 
 
 def cabs(x):
