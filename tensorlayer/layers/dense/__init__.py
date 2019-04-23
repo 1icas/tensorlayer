@@ -16,6 +16,7 @@ from .dropconnect import *
 from .ternary_dense import *
 from .quan_dense import *
 from .quan_dense_bn import *
+from .tensor_rt_quantize_dense import *
 
 __all__ = [
     'BinaryDenseLayer',
@@ -25,4 +26,7 @@ __all__ = [
     'TernaryDenseLayer',
     'QuanDenseLayer',
     'QuanDenseLayerWithBN',
+
+    #bjliu
+    'RTDenseLayer'
 ]

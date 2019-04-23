@@ -27,6 +27,8 @@ from .quan_conv_bn import *
 from .binary_conv_my import *
 from .mysign import *
 from .mybinarydense import *
+from .tensor_rt_output_quantize import *
+from .tensor_rt_quantize_conv import *
 
 __all__ = [
 
@@ -85,5 +87,7 @@ __all__ = [
     #bjliu 
     'MyBinaryConv2d',
     'MySign',
-    'MyBinaryDense'
+    'MyBinaryDense',
+    'RTQuanOutput',
+    'RTQuanConv2d'
 ]
